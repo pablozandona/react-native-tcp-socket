@@ -75,7 +75,7 @@ public class TcpSocketModule extends ReactContextBaseJavaModule {
                     // Get the network interface
                     final String localAddress = options.hasKey("localAddress") ? options.getString("localAddress") : null;
                     final String iface = options.hasKey("interface") ? options.getString("interface") : null;
-                    selectNetwork(iface, localAddress);
+                    //selectNetwork(iface, localAddress);
                     TcpSocketClient client = new TcpSocketClient(tcpEvtListener, cId, null);
                     socketMap.put(cId, client);
                     client.connect(mReactContext, host, port, options, currentNetwork.getNetwork());
